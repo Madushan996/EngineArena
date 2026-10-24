@@ -1,0 +1,41 @@
+{
+  "name": "engine-arena",
+  "version": "1.5.1",
+  "private": true,
+  "description": "A desktop battleground for UCI chess engines",
+  "author": "Engine Arena",
+  "type": "module",
+  "main": "electron/main.cjs",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "desktop": "node scripts/dev.cjs",
+    "build": "vite build",
+    "start": "node scripts/launch.cjs",
+    "test:native": "node scripts/launch.cjs scripts/smoke.cjs",
+    "test": "node --test tests/*.test.cjs",
+    "render:music": "node scripts/render-music.cjs",
+    "package": "npm run build && electron-builder --win portable"
+  },
+  "dependencies": {
+    "chess.js": "^1.4.0",
+    "lucide-react": "^0.468.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "electron": "^35.0.0",
+    "electron-builder": "^26.0.12",
+    "vite": "^6.1.0"
+  },
+  "build": {
+    "appId": "com.enginearena.desktop",
+    "electronDist": "node_modules/electron/dist",
+    "productName": "Engine Arena",
+    "directories": { "output": "release" },
+    "files": ["dist/**/*", "electron/**/*", "package.json"],
+    "asarUnpack": ["electron/builtin.cjs", "node_modules/chess.js/**/*"],
+    "win": { "target": "portable", "signAndEditExecutable": false },
+    "portable": { "artifactName": "Engine-Arena-${version}.exe" }
+  }
+}

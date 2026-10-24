@@ -1,0 +1,17 @@
+node_modules/
+dist/
+release/
+.vite/
+*.log
+artifacts/
+
+# Local tooling and personal config
+.claude/
+.vscode/
+.idea/
+.env
+.env.*
+builder-debug.yml
+arena.json
+Thumbs.db
+desktop.ini

@@ -1,0 +1,16 @@
+{
+  "title": "Midnight Gambit",
+  "original": true,
+  "instrument": "Locally synthesized piano",
+  "bpm": 80,
+  "bars": 32,
+  "key": "C minor",
+  "duration": 96,
+  "sampleRate": 44100,
+  "channels": 2,
+  "peak": 0.68,
+  "rms": 0.1366424534729465,
+  "seamJump": 0.004363951648728823,
+  "maxJump": 0.12092387876321409,
+  "notes": 486
+}
