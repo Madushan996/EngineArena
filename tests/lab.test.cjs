@@ -184,7 +184,8 @@ test('anchor catalog matches engines by their UCI names and carries both CCRL li
   assert.equal(findAnchor('Patricia 5.0').name, 'Patricia 5.0');
   assert.equal(findAnchor('Patricia 3.0'), null);
   assert.deepEqual(anchorRatings(findAnchor('Lizard 11.2.0')), { blitz: 3694, classical: 3569 });
-  assert.deepEqual(anchorRatings(findAnchor('Stockfish 8 64 BMI2')), { classical: 3358 });
+  assert.deepEqual(anchorRatings(findAnchor('Stockfish 8 64 BMI2')), { blitz: 3421, classical: 3358 });
+  assert.deepEqual(anchorRatings(findAnchor('Gyatso 1.6.0')), { blitz: 3568, classical: 3553 });
   assert.deepEqual(anchorRatings(findAnchor('Weiss 2.0')), { blitz: 3319, classical: 3263 });
   assert.deepEqual(anchorRatings(findAnchor('Tucano 12.00')), { blitz: 3491, classical: 3433 });
   // Engines that failed local calibration are no longer anchors, and say why.

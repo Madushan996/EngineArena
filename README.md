@@ -39,7 +39,7 @@ Engine Arena knows the published CCRL ratings of 22 anchor engines between 3200 
 
 | Anchor | CCRL Blitz | CCRL 40/15 |
 |---|---|---|
-| Stockfish 8 | — | 3358 |
+| Stockfish 8 | 3421 | 3358 |
 | Monolith 3 | 3258 | 3233 |
 | Weiss 2.0 | 3319 | 3263 |
 | Sturddle 2.6.0 | 3342 | 3316 |
@@ -51,7 +51,7 @@ Engine Arena knows the published CCRL ratings of 22 anchor engines between 3200 
 | Yukari 2025.11.1 | 3539 | 3451 |
 | Patricia 5.0 | 3539 | 3459 |
 | Winter 5.0 | 3544 | 3466 |
-| Gyatso 1.6.0 | 3568 | — |
+| Gyatso 1.6.0 | 3568 | 3553 |
 | Lizard 11.2 | 3694 | 3569 |
 | Motor 0.9.0 | 3695 | 3571 |
 | Quanticade Cronus 3.0 | 3717 | 3588 |
@@ -62,7 +62,7 @@ Engine Arena knows the published CCRL ratings of 22 anchor engines between 3200 
 | PlentyChess 8.0.0 | 3774 | 3617 |
 | Stockfish 19 | 3792 | 3629 |
 
-Stockfish 8 has no CCRL Blitz entry and Gyatso 1.6.0 has no 40/15 entry, so they serve as anchors on one list only. Every anchor was checked locally; two were dropped: the common Kociolek 2.1 download lacks its network file and played about 600 Elo below its rating, and Mantissa 3.7.2 scored about 80 Elo below its Blitz rating at short time controls. Import explains this if it finds them. Tucano 12.00 needs `tucano_nn03.bin` next to its executable. If an engine prints a startup error while loading (for example a missing network file), its library card shows a warning and Import anchors skips it. Use builds your CPU supports: x86-64-v4 or AVX-512 builds exit immediately on CPUs without those instructions. Engines that refuse increment-free time controls unless `EnableWeirdTCs` is set (Stormphrax) get that option automatically.
+Every anchor has both a CCRL Blitz and a CCRL 40/15 rating, so each one serves as an anchor on either list. Every anchor was checked locally; two were dropped: the common Kociolek 2.1 download lacks its network file and played about 600 Elo below its rating, and Mantissa 3.7.2 scored about 80 Elo below its Blitz rating at short time controls. Import explains this if it finds them. Tucano 12.00 needs `tucano_nn03.bin` next to its executable. If an engine prints a startup error while loading (for example a missing network file), its library card shows a warning and Import anchors skips it. Use builds your CPU supports: x86-64-v4 or AVX-512 builds exit immediately on CPUs without those instructions. Engines that refuse increment-free time controls unless `EnableWeirdTCs` is set (Stormphrax) get that option automatically.
 
 ## Quick test (fastchess)
 

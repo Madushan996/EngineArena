@@ -4,7 +4,7 @@ const fs = require('node:fs/promises');
 const path = require('node:path');
 const LIST_DATE = '2026-10-03';
 const anchors = [
-  { name: 'Stockfish 8', ccrl: 'Stockfish 8 64-bit', blitz: null, classical: 3358, match: /^stockfish 8\b/ },
+  { name: 'Stockfish 8', ccrl: 'Stockfish 8 64-bit', blitz: 3421, classical: 3358, match: /^stockfish 8\b/ },
   { name: 'Monolith 3', ccrl: 'Monolith 3 64-bit', blitz: 3258, classical: 3233, match: /^monolith 3(\.0)?\b/ },
   { name: 'Weiss 2.0', ccrl: 'Weiss 2.0 64-bit', blitz: 3319, classical: 3263, match: /^weiss 2\.0\b/ },
   { name: 'Sturddle 2.6.0', ccrl: 'Sturddle 2.6.0 64-bit', blitz: 3342, classical: 3316, match: /^sturddle 2\.6\.0\b/ },
@@ -16,7 +16,7 @@ const anchors = [
   { name: 'Yukari 2025.11.1', ccrl: 'Yukari 2025.11.1 64-bit', blitz: 3539, classical: 3451, match: /^yukari 2025\.11\.1\b/ },
   { name: 'Patricia 5.0', ccrl: 'Patricia 5.0 64-bit', blitz: 3539, classical: 3459, match: /^patricia 5(\.0)?\b/ },
   { name: 'Winter 5.0', ccrl: 'Winter 5.0 64-bit', blitz: 3544, classical: 3466, match: /^winter 5\.0\b/ },
-  { name: 'Gyatso 1.6.0', ccrl: 'Gyatso 1.6.0 64-bit', blitz: 3568, classical: null, match: /^gyatso 1\.6\.0\b/ },
+  { name: 'Gyatso 1.6.0', ccrl: 'Gyatso 1.6.0 64-bit', blitz: 3568, classical: 3553, match: /^gyatso 1\.6\.0\b/ },
   { name: 'Lizard 11.2', ccrl: 'Lizard 11.2 64-bit', blitz: 3694, classical: 3569, match: /^lizard 11\.2\b/ },
   { name: 'Motor 0.9.0', ccrl: 'Motor 0.9.0 64-bit', blitz: 3695, classical: 3571, match: /^motor 0\.9\.0\b/ },
   { name: 'Quanticade Cronus 3.0', ccrl: 'Quanticade Cronus 3.0 64-bit', blitz: 3717, classical: 3588, match: /^quanticade (cronus )?3\.0\b/ },
